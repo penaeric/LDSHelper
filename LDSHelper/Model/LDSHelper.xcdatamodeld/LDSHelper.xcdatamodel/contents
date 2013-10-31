@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3396" systemVersion="12F37" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Assistance" representedClassName="Assistance" syncable="YES">
+        <attribute name="date" attributeType="Date" syncable="YES"/>
+        <attribute name="firstDayOfMonth" attributeType="Date" syncable="YES"/>
+        <relationship name="organization" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Organization" inverseName="assistance" inverseEntity="Organization" syncable="YES"/>
+        <relationship name="persons" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Person" inverseName="assistance" inverseEntity="Person" syncable="YES"/>
+    </entity>
+    <entity name="Companionship" representedClassName="Companionship" syncable="YES">
+        <attribute name="initial" attributeType="String" syncable="YES"/>
+        <attribute name="sortingName" attributeType="String" syncable="YES"/>
+        <relationship name="companions" toMany="YES" minCount="1" maxCount="2" deletionRule="Nullify" ordered="YES" destinationEntity="Person" inverseName="companionedBy" inverseEntity="Person" syncable="YES"/>
+        <relationship name="inOrganization" toMany="YES" maxCount="2" deletionRule="Nullify" destinationEntity="Organization" inverseName="companionships" inverseEntity="Organization" syncable="YES"/>
+        <relationship name="visitRecords" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Visit" inverseName="companionship" inverseEntity="Visit" syncable="YES"/>
+        <relationship name="visits" optional="YES" toMany="YES" maxCount="10" deletionRule="Nullify" ordered="YES" destinationEntity="Person" inverseName="visitedBy" inverseEntity="Person" syncable="YES"/>
+    </entity>
+    <entity name="Organization" representedClassName="Organization" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="assistance" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Assistance" inverseName="organization" inverseEntity="Assistance" syncable="YES"/>
+        <relationship name="companionships" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Companionship" inverseName="inOrganization" inverseEntity="Companionship" syncable="YES"/>
+        <relationship name="members" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Person" inverseName="memberOf" inverseEntity="Person" syncable="YES"/>
+        <relationship name="reports" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Report" inverseName="forOrganization" inverseEntity="Report" syncable="YES"/>
+    </entity>
+    <entity name="Person" representedClassName="Person" syncable="YES">
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="initial" optional="YES" transient="YES" attributeType="String" syncable="YES"/>
+        <attribute name="initials" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mobilePhone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="normalizedName" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="primaryPhone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="streetAddress" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thumbnail" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="thumbnailGraySmall" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="thumbnailSmall" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="zipCode" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="assistance" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Assistance" inverseName="persons" inverseEntity="Assistance" syncable="YES"/>
+        <relationship name="companionedBy" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Companionship" inverseName="companions" inverseEntity="Companionship" syncable="YES"/>
+        <relationship name="memberOf" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Organization" inverseName="members" inverseEntity="Organization" syncable="YES"/>
+        <relationship name="visitedBy" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Companionship" inverseName="visits" inverseEntity="Companionship" syncable="YES"/>
+        <relationship name="visitedRecords" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Visit" inverseName="visited" inverseEntity="Visit" syncable="YES"/>
+    </entity>
+    <entity name="Report" representedClassName="Report" syncable="YES">
+        <attribute name="date" attributeType="Date" syncable="YES"/>
+        <attribute name="dateCreated" attributeType="Date" syncable="YES"/>
+        <attribute name="file" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <attribute name="isFavorite" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="type" attributeType="String" syncable="YES"/>
+        <relationship name="forOrganization" maxCount="1" deletionRule="Nullify" destinationEntity="Organization" inverseName="reports" inverseEntity="Organization" syncable="YES"/>
+    </entity>
+    <entity name="Visit" representedClassName="Visit" syncable="YES">
+        <attribute name="comment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="date" attributeType="Date" syncable="YES"/>
+        <relationship name="companionship" maxCount="1" deletionRule="Nullify" destinationEntity="Companionship" inverseName="visitRecords" inverseEntity="Companionship" syncable="YES"/>
+        <relationship name="visited" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Person" inverseName="visitedRecords" inverseEntity="Person" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Assistance" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Companionship" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Organization" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Person" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Report" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Visit" positionX="0" positionY="0" width="0" height="0"/>
+    </elements>
+</model>

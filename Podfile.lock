@@ -1,0 +1,31 @@
+PODS:
+  - CocoaLumberjack (1.6.2)
+  - HexColors (2.2.1)
+  - MagicalRecord (2.2)
+  - MZDayPicker (0.0.5)
+  - SWRevealViewController (1.0.8)
+  - TSMessages (0.9.4):
+    - HexColors
+
+DEPENDENCIES:
+  - CocoaLumberjack (~> 1.6.2)
+  - MagicalRecord (from `https://github.com/magicalpanda/MagicalRecord.git`)
+  - MZDayPicker (~> 0.0.1)
+  - SWRevealViewController (~> 1.0.4)
+  - TSMessages (from `https://github.com/toursprung/TSMessages.git`)
+
+EXTERNAL SOURCES:
+  MagicalRecord:
+    :git: https://github.com/magicalpanda/MagicalRecord.git
+  TSMessages:
+    :git: https://github.com/toursprung/TSMessages.git
+
+SPEC CHECKSUMS:
+  CocoaLumberjack: 2619775f386bbec1e870eddb5040f870c68726b1
+  HexColors: 3a68db077cd6572a8f7d4aa1add284dd2436a934
+  MagicalRecord: 565156bae4de961860fad200a5c52e21e7933ebe
+  MZDayPicker: 1ebc98a0aa72906dc367de4c5b7d4ddb054bb910
+  SWRevealViewController: 5688d9d017e228c9edd92db359f670d8c47ab8e6
+  TSMessages: de3fecb312d44078128add86d4347307669d0af2
+
+COCOAPODS: 0.27.1
