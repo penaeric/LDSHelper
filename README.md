@@ -50,5 +50,5 @@ Open the **.xcworkspace** file and not the **xcodeproj** file
 If linker errors are found, easiest fix is to re-install external libraries using [CocoaPods](http://cocoapods.org/):
 
 ```sh
-pods install
+pod install
 ```
