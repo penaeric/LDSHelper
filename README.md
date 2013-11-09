@@ -52,3 +52,20 @@ If linker errors are found, easiest fix is to re-install external libraries usin
 ```sh
 pod install
 ```
+
+Screenshots
+---
+
+![Alt text](00-menu.png?raw=true "LDS Helper - Main Menu")
+
+![Alt text](01-members.png?raw=true "LDS Helper - Members View")
+
+![Alt text](02-member-view.png?raw=true "LDS Helper - Member View")
+
+![Alt text](04-assistance.png?raw=true "LDS Helper - Assistance")
+
+![Alt text](06-hometeaching-reports.png?raw=true "LDS Helper - Hometeaching Reports")
+
+![Alt text](09-reports-view.png?raw=true "LDS Helper - Reports View")
+
+![Alt text](11-dummy-pdf-report.png?raw=true "LDS Helper - Dummy PDF Report")
