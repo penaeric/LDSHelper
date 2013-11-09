@@ -56,16 +56,16 @@ pod install
 Screenshots
 ---
 
-![Alt text](00-menu.png?raw=true "LDS Helper - Main Menu")
+![Alt text](screenshots/00-menu.png?raw=true "LDS Helper - Main Menu")
 
-![Alt text](01-members.png?raw=true "LDS Helper - Members View")
+![Alt text](screenshots/01-members.png?raw=true "LDS Helper - Members View")
 
-![Alt text](02-member-view.png?raw=true "LDS Helper - Member View")
+![Alt text](screenshots/02-member-view.png?raw=true "LDS Helper - Member View")
 
-![Alt text](04-assistance.png?raw=true "LDS Helper - Assistance")
+![Alt text](screenshots/04-assistance.png?raw=true "LDS Helper - Assistance")
 
-![Alt text](06-hometeaching-reports.png?raw=true "LDS Helper - Hometeaching Reports")
+![Alt text](screenshots/06-hometeaching-reports.png?raw=true "LDS Helper - Hometeaching Reports")
 
-![Alt text](09-reports-view.png?raw=true "LDS Helper - Reports View")
+![Alt text](screenshots/09-reports-view.png?raw=true "LDS Helper - Reports View")
 
-![Alt text](11-dummy-pdf-report.png?raw=true "LDS Helper - Dummy PDF Report")
+![Alt text](screenshots/11-dummy-pdf-report.png?raw=true "LDS Helper - Dummy PDF Report")
